@@ -1,11 +1,15 @@
 /*
 Copyright © 2025 NAME HERE <EMAIL ADDRESS>
-
 */
 package main
 
-import "tasky/cmd"
+import (
+	"tasky/database"
+)
 
 func main() {
-	cmd.Execute()
+	filename := "./iris.csv"
+	newDatabase := database.NewCsvDatabase(filename)
+	newDatabase.PrintDatabase()
+	// cmd.Execute()
 }
